@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to get latitude and longitude for a city
     async function getLatLong(cityName) {
         const apiKey = '11d55f8a330c648b984ad16fd539b704';
-        const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
+        const apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
         try {
             const response = await fetch(apiUrl);
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch forecast using latitude and longitude
     async function getForecast(latitude, longitude) {
         const apiKey = '11d55f8a330c648b984ad16fd539b704';
-        const apiUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
         try {
             const response = await fetch(apiUrl);
